@@ -255,8 +255,8 @@ section h2 {
    ---------------------------------------- */
 .screenshots {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
+    grid-template-columns: 55% 45%;
+    gap: 24px;
     padding: 40px 0 60px;
     align-items: center;
 }
@@ -286,57 +286,32 @@ section h2 {
         0 0 30px rgba(51, 142, 247, 0.1);
 }
 
-/* Watch column — two stacked */
+/* Watch column — three stacked */
 .watch-stack {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 24px;
     align-items: center;
 }
 
 /* Apple Watch Series 11 frame */
 .watch-frame {
     position: relative;
-    width: 180px;
-    padding: 10px;
+    width: 140px;
+    padding: 8px;
     background: linear-gradient(145deg, #2a2a2e, #1a1a1e);
-    border-radius: 42px;
+    border-radius: 36px;
+    overflow: hidden;
     box-shadow:
         0 15px 40px rgba(0, 0, 0, 0.4),
         0 0 20px rgba(51, 142, 247, 0.08),
         inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
-/* Digital crown nub */
-.watch-frame::after {
-    content: '';
-    position: absolute;
-    right: -5px;
-    top: 30%;
-    width: 5px;
-    height: 22px;
-    background: linear-gradient(145deg, #3a3a3e, #222226);
-    border-radius: 0 3px 3px 0;
-    box-shadow: 1px 0 4px rgba(0, 0, 0, 0.3);
-}
-
-/* Side button below crown */
-.watch-frame::before {
-    content: '';
-    position: absolute;
-    right: -4px;
-    top: calc(30% + 28px);
-    width: 4px;
-    height: 14px;
-    background: linear-gradient(145deg, #3a3a3e, #222226);
-    border-radius: 0 2px 2px 0;
-    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.3);
-}
-
 .watch-frame img {
     width: 100%;
     display: block;
-    border-radius: 34px;
+    border-radius: 28px;
 }
 
 /* ----------------------------------------
