@@ -251,31 +251,92 @@ section h2 {
 }
 
 /* ----------------------------------------
-   Screenshots
+   Screenshots — 2-column layout
    ---------------------------------------- */
 .screenshots {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
     padding: 40px 0 60px;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
+.screenshot-device {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.screenshot-device figcaption {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    text-align: center;
+}
+
+/* Phone frame */
 .screenshot-phone {
-    width: 220px;
-    border-radius: 20px;
+    width: 100%;
+    max-width: 260px;
+    border-radius: 24px;
     box-shadow:
         0 20px 60px rgba(0, 0, 0, 0.5),
         0 0 30px rgba(51, 142, 247, 0.1);
 }
 
-.screenshot-watch {
-    width: 140px;
-    border-radius: 50%;
+/* Watch column — two stacked */
+.watch-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+}
+
+/* Apple Watch Series 11 frame */
+.watch-frame {
+    position: relative;
+    width: 180px;
+    padding: 10px;
+    background: linear-gradient(145deg, #2a2a2e, #1a1a1e);
+    border-radius: 42px;
     box-shadow:
         0 15px 40px rgba(0, 0, 0, 0.4),
-        0 0 20px rgba(51, 142, 247, 0.1);
+        0 0 20px rgba(51, 142, 247, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+/* Digital crown nub */
+.watch-frame::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 30%;
+    width: 5px;
+    height: 22px;
+    background: linear-gradient(145deg, #3a3a3e, #222226);
+    border-radius: 0 3px 3px 0;
+    box-shadow: 1px 0 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Side button below crown */
+.watch-frame::before {
+    content: '';
+    position: absolute;
+    right: -4px;
+    top: calc(30% + 28px);
+    width: 4px;
+    height: 14px;
+    background: linear-gradient(145deg, #3a3a3e, #222226);
+    border-radius: 0 2px 2px 0;
+    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.watch-frame img {
+    width: 100%;
+    display: block;
+    border-radius: 34px;
 }
 
 /* ----------------------------------------
@@ -589,15 +650,16 @@ footer a:hover {
     }
 
     .screenshots {
-        gap: 16px;
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 
     .screenshot-phone {
-        width: 180px;
+        max-width: 220px;
     }
 
-    .screenshot-watch {
-        width: 110px;
+    .watch-frame {
+        width: 150px;
     }
 
     .features {
