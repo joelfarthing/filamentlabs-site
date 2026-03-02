@@ -10,7 +10,7 @@
 .agents/
 inbox/
 scripts/
-Sync alias
+Sync symlink
 
 # Notes (keep out of the deployed site)
 notes/

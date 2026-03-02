@@ -4,17 +4,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filament Labs</title>
-    <meta name="description" content="Filament Labs — privacy-first apps and tools by Joel Farthing.">
+    <title>Filament Labs — A window, not a verdict.</title>
+    <meta name="description"
+        content="Filament Labs builds privacy-first tools for the curious. Home of HRVSpark — raw HRV data on your Apple Watch face, without the verdict.">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://filamentlabs.io/">
+    <meta property="og:title" content="Filament Labs — A window, not a verdict.">
+    <meta property="og:description"
+        content="Privacy-first tools for the curious. Home of HRVSpark — raw HRV data on your Apple Watch, beautifully.">
+    <meta property="og:image" content="https://filamentlabs.io/images/watch-screenshot.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Filament Labs — A window, not a verdict.">
+    <meta name="twitter:description" content="Privacy-first tools for the curious. Home of HRVSpark.">
+    <meta name="twitter:image" content="https://filamentlabs.io/images/watch-screenshot.png">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <div class="container" style="padding-top: 120px; text-align: center;">
-        <h1 style="font-size: 2.5rem; margin-bottom: 12px;">Filament Labs</h1>
-        <p style="font-size: 1.1rem; margin-bottom: 48px;">Something is coming. Stay tuned.</p>
-        <a href="/hrvspark/" style="font-size: 0.95rem;">HRVSpark →</a>
+    <div class="container">
+
+        <!-- HERO -->
+        <header class="hero">
+            <h1>Filament Labs</h1>
+            <p class="tagline">A window, not a verdict.</p>
+            <p class="sub-tagline">Privacy-first tools for the curious.</p>
+            <canvas class="hero-sparkline" id="heroSparkline" aria-hidden="true"></canvas>
+        </header>
+
+        <hr class="divider">
+
+        <!-- PROJECTS -->
+        <section>
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <a href="/hrvspark/" class="project-card">
+                    <div class="project-card-icon">
+                        <img src="/images/logo.svg" alt="HRVSpark icon">
+                    </div>
+                    <div class="project-card-text">
+                        <h3>HRVSpark</h3>
+                        <p>Your HRV. Raw. Beautiful. On your wrist. A complication-first HRV dashboard for Apple Watch
+                            and iPhone.</p>
+                    </div>
+                    <span class="project-card-arrow">→</span>
+                </a>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <!-- ABOUT -->
+        <section>
+            <div class="about-section">
+                <h2>About</h2>
+                <p>Filament Labs is the independent work of Joel Farthing — an attorney turned systems thinker, building
+                    tools that respect your data and trust your intelligence.</p>
+                <p>No analytics. No telemetry. No interpretation layers. Just clean, honest software that shows you
+                    what's happening and lets you decide what it means.</p>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>© 2026 Filament Labs · Fayetteville, AR</p>
+        </footer>
     </div>
+
     <script src="/js/main.js"></script>
 </body>
 
