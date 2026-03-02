@@ -278,7 +278,23 @@ section h2 {
 }
 
 .screenshots>.screenshot-device:first-child {
-    justify-content: space-between;
+    justify-content: center;
+}
+
+.screenshots>.screenshot-device:first-child .screenshot-phone {
+    flex: 1;
+    min-height: 0;
+    object-fit: contain;
+    width: auto;
+    max-width: 100%;
+}
+
+/* Phone frame */
+.screenshot-phone {
+    border-radius: 24px;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(51, 142, 247, 0.1);
 }
 
 .screenshot-device figcaption {
@@ -289,21 +305,12 @@ section h2 {
     text-align: center;
 }
 
-/* Phone frame */
-.screenshot-phone {
-    width: 100%;
-    max-width: 320px;
-    border-radius: 24px;
-    box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.5),
-        0 0 30px rgba(51, 142, 247, 0.1);
-}
-
 /* Watch column — three stacked */
 .watch-stack {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: center;
     justify-content: space-between;
     height: 100%;
 }
