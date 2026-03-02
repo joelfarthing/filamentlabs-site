@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Editor
+*.swp
+*.swo
+*~
+
+# Agent/tooling
+.agents/
+inbox/
+scripts/
+Sync alias
+
+# Notes (keep out of the deployed site)
+notes/
+
+# Reference files (not part of the live site)
+reference/
