@@ -35,6 +35,14 @@
     letter-spacing: 0.02em;
 }
 
+.project-card-text .brand-title {
+    font-size: 1.6rem;
+}
+
+.hero-product .brand-title {
+    font-size: 4rem;
+}
+
 /* ----------------------------------------
    Reset
    ---------------------------------------- */
@@ -569,6 +577,10 @@ footer a:hover {
     .hero h1,
     .hero-product h1 {
         font-size: 2.2rem;
+    }
+
+    .hero-product .brand-title {
+        font-size: 2.8rem;
     }
 
     .hero .tagline,
