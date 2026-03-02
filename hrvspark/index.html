@@ -25,15 +25,17 @@
     <meta name="twitter:image" content="https://filamentlabs.io/images/og-hrvspark.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Zen+Tokyo+Zoo&display=swap">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Zen+Tokyo+Zoo&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="stylesheet" href="/css/style.css?v=14">
+    <link rel="stylesheet" href="/css/style.css?v=15">
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -63,208 +65,239 @@
 
 <body>
     <div class="container">
+        <main>
 
+            <!-- HERO -->
+            <header class="hero-product">
+                <div class="hero-logo">
+                    <img src="/images/logo.svg" alt="HRVSpark Logo" width="100" height="100">
+                </div>
+                <div class="hero-text">
+                    <h1 class="brand-title">hrv/spark</h1>
+                    <p class="tagline">Your HRV. Raw. Beautiful. On your wrist.</p>
+                    <p class="sub-tagline">Data without the verdict.</p>
+                </div>
+            </header>
 
-        <!-- HERO -->
-        <header class="hero-product">
-            <div class="hero-logo">
-                <img src="/images/logo.svg" alt="HRVSpark Logo">
-            </div>
-            <div class="hero-text">
-                <h1 class="brand-title">hrv/spark</h1>
-                <p class="tagline">Your HRV. Raw. Beautiful. On your wrist.</p>
-                <p class="sub-tagline">Data without the verdict.</p>
-            </div>
-        </header>
-
-        <!-- SCREENSHOTS -->
-        <div class="screenshots animate-on-scroll">
-            <figure class="screenshot-device">
-                <img src="/images/ios_live_gallery.png" alt="HRVSpark iPhone — Live Complications Gallery"
-                    class="screenshot-phone">
-                <figcaption>iOS Live Complications Gallery</figcaption>
-            </figure>
-            <div class="watch-stack">
+            <!-- SCREENSHOTS -->
+            <div class="screenshots animate-on-scroll">
                 <figure class="screenshot-device">
-                    <div class="watch-frame">
-                        <img src="/images/watchos_live_gallery.png" alt="HRVSpark watchOS App">
-                    </div>
-                    <figcaption>watchOS App</figcaption>
+                    <picture>
+                        <source srcset="/images/ios_live_gallery.webp" type="image/webp">
+                        <img src="/images/ios_live_gallery.png" alt="HRVSpark iPhone — Live Complications Gallery"
+                            class="screenshot-phone" width="1206" height="2047" loading="lazy">
+                    </picture>
+                    <figcaption>iOS Live Complications Gallery</figcaption>
                 </figure>
-                <figure class="screenshot-device">
-                    <div class="watch-frame">
-                        <img src="/images/watchos_face_gauge_rectangular_complications.png"
-                            alt="HRVSpark Complications on watch face">
-                    </div>
-                    <figcaption>Gauge + Rectangular Complications</figcaption>
-                </figure>
-                <figure class="screenshot-device">
-                    <div class="watch-frame">
-                        <img src="/images/watchos_complications_picker.png" alt="HRVSpark watchOS Complications Picker">
-                    </div>
-                    <figcaption>watchOS Complications Picker</figcaption>
-                </figure>
-            </div>
-        </div>
-
-        <hr class="divider">
-
-        <!-- WHAT IT IS -->
-        <section>
-            <h2>A window, not a verdict.</h2>
-            <p>HRVSpark puts your Heart Rate Variability data exactly where you want it — on your Apple Watch face, as a
-                live sparkline graph, always visible, never interpreted.</p>
-            <p>No readiness scores. No stress labels. No algorithm telling you how to feel about your own physiology.
-                Just your raw SDNN values, beautifully displayed across four time windows.</p>
-            <p>You already know what a cold plunge does to your HRV. You already know what poor sleep looks like in the
-                numbers. HRVSpark gives you the clearest possible view of your data — and trusts you to know what it
-                means.</p>
-        </section>
-
-        <!-- FEATURES -->
-        <div class="features">
-            <div class="feature-card animate-on-scroll">
-                <div class="number">10</div>
-                <div class="label">Watch Face Complications</div>
-            </div>
-            <div class="feature-card animate-on-scroll">
-                <div class="number">4</div>
-                <div class="label">Time Windows</div>
-            </div>
-            <div class="feature-card animate-on-scroll">
-                <div class="number">0</div>
-                <div class="label">Stress Scores</div>
-            </div>
-            <div class="feature-card feature-trust animate-on-scroll">
-                <div class="number">∞</div>
-                <div class="label">Trust in You</div>
-            </div>
-        </div>
-
-        <hr class="divider">
-
-        <!-- THE PROBLEM -->
-        <section class="animate-on-scroll">
-            <h2>The Problem With HRV Apps</h2>
-            <p>Heart Rate Variability is one of the most revealing windows into your autonomic nervous system — a daily
-                snapshot of how recovered, stressed, or activated you are at a physiological level.</p>
-            <p>And yet most HRV apps take that raw, honest signal and bury it under a layer of interpretation. You get a
-                score. A label. A color. A verdict.</p>
-            <p><em>Your readiness is 62. You are moderately stressed. Recovery recommended.</em></p>
-            <p>For the curious, the self-directed, the ones who already know their own bodies well enough to find those
-                verdicts condescending — it produces exactly the opposite of the intended effect. Seeing a low readiness
-                score first thing in the morning is its own stressor.</p>
-        </section>
-
-        <hr class="divider">
-
-        <!-- DESIGN PHILOSOPHY -->
-        <section>
-            <h2>Design Philosophy</h2>
-
-            <div class="quote-block animate-on-scroll">
-                <p>"I always drift up and vary a lot while sleeping. The numbers always crash after hot yoga. They go up
-                    with tvTENS on my ear. They go WAY up with a cold shower or ice plunge. I wanted to be able to see
-                    THAT — not a score or a color behind an opaque interpretation layer."</p>
-                <p class="attribution">— the creator</p>
+                <div class="watch-stack">
+                    <figure class="screenshot-device">
+                        <div class="watch-frame">
+                            <picture>
+                                <source srcset="/images/watchos_live_gallery.webp" type="image/webp">
+                                <img src="/images/watchos_live_gallery.png" alt="HRVSpark watchOS App" width="396"
+                                    height="484" loading="lazy">
+                            </picture>
+                        </div>
+                        <figcaption>watchOS App</figcaption>
+                    </figure>
+                    <figure class="screenshot-device">
+                        <div class="watch-frame">
+                            <picture>
+                                <source srcset="/images/watchos_face_gauge_rectangular_complications.webp"
+                                    type="image/webp">
+                                <img src="/images/watchos_face_gauge_rectangular_complications.png"
+                                    alt="HRVSpark Complications on watch face" width="396" height="484" loading="lazy">
+                            </picture>
+                        </div>
+                        <figcaption>Gauge + Rectangular Complications</figcaption>
+                    </figure>
+                    <figure class="screenshot-device">
+                        <div class="watch-frame">
+                            <picture>
+                                <source srcset="/images/watchos_complications_picker.webp" type="image/webp">
+                                <img src="/images/watchos_complications_picker.png"
+                                    alt="HRVSpark watchOS Complications Picker" width="396" height="484" loading="lazy">
+                            </picture>
+                        </div>
+                        <figcaption>watchOS Complications Picker</figcaption>
+                    </figure>
+                </div>
             </div>
 
-            <p>No interpretation means no color-coding by value. No anxiety means subtle aesthetics — dark backgrounds,
-                soft blue glows, data that whispers rather than shouts.</p>
-            <p>Complication-first design means it's always there — not something you open, but something you glance at.
-                Part of your watch face like the time and the date.</p>
+            <hr class="divider">
 
-            <div class="quote-block animate-on-scroll">
-                <p>"The no-scores approach makes total sense. I found myself chasing the number instead of actually
-                    understanding my patterns. Removing the interpretation layer and just looking at the raw 7-day
-                    trend changed how I used the data completely. The anxiety that comes from a colored score or
-                    verdict is real. Raw numbers let you build your own intuition over time instead of outsourcing
-                    it to someone else's algorithm."</p>
-                <p class="attribution">— beta tester</p>
-            </div>
-        </section>
+            <!-- WHAT IT IS -->
+            <section>
+                <h2>A window, not a verdict.</h2>
+                <p>HRVSpark puts your Heart Rate Variability data exactly where you want it — on your Apple Watch face,
+                    as a
+                    live sparkline graph, always visible, never interpreted.</p>
+                <p>No readiness scores. No stress labels. No algorithm telling you how to feel about your own
+                    physiology.
+                    Just your raw SDNN values, beautifully displayed across four time windows.</p>
+                <p>You already know what a cold plunge does to your HRV. You already know what poor sleep looks like in
+                    the
+                    numbers. HRVSpark gives you the clearest possible view of your data — and trusts you to know what it
+                    means.</p>
+            </section>
 
-        <hr class="divider">
-
-        <!-- WHO IT'S FOR -->
-        <section class="animate-on-scroll">
-            <h2>Who It's For</h2>
-
-            <div class="persona">
-                <strong>The self-experimenter.</strong>
-                <p>You're already tracking. You've already noticed patterns. You don't need an app to tell you what your
-                    body is doing — you need a better window to see it.</p>
-            </div>
-
-            <div class="persona">
-                <strong>The biohacker.</strong>
-                <p>You do cold exposure, breathwork, vagal nerve stimulation, HRV-guided training. You need granular,
-                    honest data to evaluate your interventions.</p>
-            </div>
-
-            <div class="persona">
-                <strong>The HRV veteran.</strong>
-                <p>You've used the other apps. You liked some features. But you got tired of the interpretation layer —
-                    the gamification of your own physiology.</p>
+            <!-- FEATURES -->
+            <div class="features">
+                <div class="feature-card animate-on-scroll">
+                    <div class="number">10</div>
+                    <div class="label">Watch Face Complications</div>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="number">4</div>
+                    <div class="label">Time Windows</div>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="number">0</div>
+                    <div class="label">Stress Scores</div>
+                </div>
+                <div class="feature-card feature-trust animate-on-scroll">
+                    <div class="number">∞</div>
+                    <div class="label">Trust in You</div>
+                </div>
             </div>
 
-            <div class="persona">
-                <strong>The anxiety-conscious.</strong>
-                <p>When the app stops telling you you're stressed, checking your HRV stops being a source of dread. It
-                    becomes simply informative.</p>
-            </div>
-        </section>
+            <hr class="divider">
 
-        <hr class="divider">
+            <!-- THE PROBLEM -->
+            <section class="animate-on-scroll">
+                <h2>The Problem With HRV Apps</h2>
+                <p>Heart Rate Variability is one of the most revealing windows into your autonomic nervous system — a
+                    daily
+                    snapshot of how recovered, stressed, or activated you are at a physiological level.</p>
+                <p>And yet most HRV apps take that raw, honest signal and bury it under a layer of interpretation. You
+                    get a
+                    score. A label. A color. A verdict.</p>
+                <p><em>Your readiness is 62. You are moderately stressed. Recovery recommended.</em></p>
+                <p>For the curious, the self-directed, the ones who already know their own bodies well enough to find
+                    those
+                    verdicts condescending — it produces exactly the opposite of the intended effect. Seeing a low
+                    readiness
+                    score first thing in the morning is its own stressor.</p>
+            </section>
 
-        <!-- COMPARISON -->
-        <section class="animate-on-scroll">
-            <h2>What Makes This Different</h2>
-            <table class="comparison">
-                <thead>
-                    <tr>
-                        <th>Other HRV Apps</th>
-                        <th>hrv/spark</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Readiness score</td>
-                        <td>Raw SDNN value</td>
-                    </tr>
-                    <tr>
-                        <td>Color-coded verdict</td>
-                        <td>Neutral sparkline</td>
-                    </tr>
-                    <tr>
-                        <td>Proprietary algorithm</td>
-                        <td>Apple HealthKit data</td>
-                    </tr>
-                    <tr>
-                        <td>Opens an app</td>
-                        <td>Always on your watch face</td>
-                    </tr>
-                    <tr>
-                        <td>Smooth the data</td>
-                        <td>Show the data</td>
-                    </tr>
-                    <tr>
-                        <td>Tell you what to do</td>
-                        <td>Show you what happened</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+            <hr class="divider">
 
-        <hr class="divider">
+            <!-- DESIGN PHILOSOPHY -->
+            <section>
+                <h2>Design Philosophy</h2>
 
-        <!-- CTA -->
-        <section class="cta-block animate-on-scroll">
-            <h2>Coming Soon to the App Store</h2>
-            <p>Currently in TestFlight beta.</p>
-            <a href="https://testflight.apple.com/join/QwpmYUT2" class="btn-primary">Join the Beta</a>
-            <a href="privacy.html" class="btn-secondary">Privacy Policy</a>
-        </section>
+                <div class="quote-block animate-on-scroll">
+                    <p>"I always drift up and vary a lot while sleeping. The numbers always crash after hot yoga. They
+                        go up
+                        with tvTENS on my ear. They go WAY up with a cold shower or ice plunge. I wanted to be able to
+                        see
+                        THAT — not a score or a color behind an opaque interpretation layer."</p>
+                    <p class="attribution">— the creator</p>
+                </div>
+
+                <p>No interpretation means no color-coding by value. No anxiety means subtle aesthetics — dark
+                    backgrounds,
+                    soft blue glows, data that whispers rather than shouts.</p>
+                <p>Complication-first design means it's always there — not something you open, but something you glance
+                    at.
+                    Part of your watch face like the time and the date.</p>
+
+                <div class="quote-block animate-on-scroll">
+                    <p>"The no-scores approach makes total sense. I found myself chasing the number instead of actually
+                        understanding my patterns. Removing the interpretation layer and just looking at the raw 7-day
+                        trend changed how I used the data completely. The anxiety that comes from a colored score or
+                        verdict is real. Raw numbers let you build your own intuition over time instead of outsourcing
+                        it to someone else's algorithm."</p>
+                    <p class="attribution">— beta tester</p>
+                </div>
+            </section>
+
+            <hr class="divider">
+
+            <!-- WHO IT'S FOR -->
+            <section class="animate-on-scroll">
+                <h2>Who It's For</h2>
+
+                <div class="persona">
+                    <strong>The self-experimenter.</strong>
+                    <p>You're already tracking. You've already noticed patterns. You don't need an app to tell you what
+                        your
+                        body is doing — you need a better window to see it.</p>
+                </div>
+
+                <div class="persona">
+                    <strong>The biohacker.</strong>
+                    <p>You do cold exposure, breathwork, vagal nerve stimulation, HRV-guided training. You need
+                        granular,
+                        honest data to evaluate your interventions.</p>
+                </div>
+
+                <div class="persona">
+                    <strong>The HRV veteran.</strong>
+                    <p>You've used the other apps. You liked some features. But you got tired of the interpretation
+                        layer —
+                        the gamification of your own physiology.</p>
+                </div>
+
+                <div class="persona">
+                    <strong>The anxiety-conscious.</strong>
+                    <p>When the app stops telling you you're stressed, checking your HRV stops being a source of dread.
+                        It
+                        becomes simply informative.</p>
+                </div>
+            </section>
+
+            <hr class="divider">
+
+            <!-- COMPARISON -->
+            <section class="animate-on-scroll">
+                <h2>What Makes This Different</h2>
+                <table class="comparison">
+                    <thead>
+                        <tr>
+                            <th>Other HRV Apps</th>
+                            <th>hrv/spark</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Readiness score</td>
+                            <td>Raw SDNN value</td>
+                        </tr>
+                        <tr>
+                            <td>Color-coded verdict</td>
+                            <td>Neutral sparkline</td>
+                        </tr>
+                        <tr>
+                            <td>Proprietary algorithm</td>
+                            <td>Apple HealthKit data</td>
+                        </tr>
+                        <tr>
+                            <td>Opens an app</td>
+                            <td>Always on your watch face</td>
+                        </tr>
+                        <tr>
+                            <td>Smooth the data</td>
+                            <td>Show the data</td>
+                        </tr>
+                        <tr>
+                            <td>Tell you what to do</td>
+                            <td>Show you what happened</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <hr class="divider">
+
+            <!-- CTA -->
+            <section class="cta-block animate-on-scroll">
+                <h2>Coming Soon to the App Store</h2>
+                <p>Currently in TestFlight beta.</p>
+                <a href="https://testflight.apple.com/join/QwpmYUT2" class="btn-primary">Join the Beta</a>
+                <a href="privacy.html" class="btn-secondary">Privacy Policy</a>
+            </section>
+        </main>
 
         <!-- FOOTER -->
         <footer>
