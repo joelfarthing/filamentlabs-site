@@ -20,9 +20,19 @@
     --accent-orange: #ff7c1e;
     --border: rgba(255, 255, 255, 0.06);
     --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-brand: 'Zen Tokyo Zoo', cursive;
     --radius-sm: 8px;
     --radius-md: 16px;
     --radius-lg: 24px;
+}
+
+/* ----------------------------------------
+   Brand Title (hrv/spark)
+   ---------------------------------------- */
+.brand-title {
+    font-family: var(--font-brand);
+    text-transform: lowercase;
+    letter-spacing: 0.02em;
 }
 
 /* ----------------------------------------
