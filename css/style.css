@@ -306,7 +306,7 @@ section h2 {
 /* Apple Watch Series 11 frame */
 .watch-frame {
     position: relative;
-    width: 120px;
+    width: 126px;
     padding: 8px;
     background: linear-gradient(145deg, #2a2a2e, #1a1a1e);
     border-radius: 36px;
