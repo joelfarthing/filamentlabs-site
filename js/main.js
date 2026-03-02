@@ -98,3 +98,25 @@
    // Handle resize
    window.addEventListener('resize', resize);
 })();
+
+/* ----------------------------------------
+   Scroll-reveal: IntersectionObserver
+   ---------------------------------------- */
+(function () {
+   'use strict';
+
+   if (!('IntersectionObserver' in window)) return;
+
+   var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+         if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+         }
+      });
+   }, { threshold: 0.15 });
+
+   document.querySelectorAll('.animate-on-scroll').forEach(function (el) {
+      observer.observe(el);
+   });
+})();
