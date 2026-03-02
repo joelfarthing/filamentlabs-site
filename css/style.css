@@ -208,7 +208,7 @@ section h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 24px;
+    gap: 40px;
     padding: 32px 0 24px;
 }
 
@@ -235,9 +235,10 @@ section h2 {
 
 .hero-product h1 {
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 400;
+    line-height: 1;
     letter-spacing: -0.03em;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     background: linear-gradient(135deg, #ffffff, #a0c4ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -266,7 +267,7 @@ section h2 {
     grid-template-columns: 1fr 1fr;
     gap: 24px;
     padding: 24px 0 48px;
-    align-items: stretch;
+    align-items: center;
 }
 
 .screenshot-device {
@@ -274,17 +275,6 @@ section h2 {
     flex-direction: column;
     align-items: center;
     gap: 12px;
-}
-
-/* Phone column stretches to match watch stack height */
-.screenshot-device:first-child {
-    justify-content: center;
-}
-
-.screenshot-device:first-child .screenshot-phone {
-    max-width: none;
-    width: 100%;
-    height: auto;
 }
 
 .screenshot-device figcaption {
@@ -298,7 +288,7 @@ section h2 {
 /* Phone frame */
 .screenshot-phone {
     width: 100%;
-    max-width: 260px;
+    max-width: 240px;
     border-radius: 24px;
     box-shadow:
         0 20px 60px rgba(0, 0, 0, 0.5),
@@ -309,14 +299,14 @@ section h2 {
 .watch-stack {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 20px;
     align-items: center;
 }
 
 /* Apple Watch Series 11 frame */
 .watch-frame {
     position: relative;
-    width: 140px;
+    width: 160px;
     padding: 8px;
     background: linear-gradient(145deg, #2a2a2e, #1a1a1e);
     border-radius: 36px;
@@ -406,7 +396,7 @@ section h2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
-    margin: 32px 0;
+    margin: 32px 0 64px;
 }
 
 .feature-trust {
