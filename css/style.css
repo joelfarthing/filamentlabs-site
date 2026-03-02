@@ -127,7 +127,7 @@ em {
    Layout
    ---------------------------------------- */
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 16px;
     position: relative;
@@ -207,6 +207,7 @@ section h2 {
 .hero-product {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 24px;
     padding: 32px 0 24px;
 }
@@ -403,9 +404,14 @@ section h2 {
    ---------------------------------------- */
 .features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 16px;
     margin: 32px 0;
+}
+
+.feature-trust {
+    grid-column: 2;
+    transform: translateY(24px);
 }
 
 .feature-card {
@@ -657,6 +663,11 @@ footer a:hover {
 
     .features {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .feature-trust {
+        grid-column: auto;
+        transform: none;
     }
 
     .project-card {
