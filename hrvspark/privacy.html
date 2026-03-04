@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'none'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://filamentlabs.io; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'none'; frame-ancestors 'none';">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HRVSpark — Privacy Policy</title>
     <meta name="description" content="Privacy policy for HRVSpark — your data stays on your devices.">
@@ -50,14 +52,28 @@
             StoreKit — both on-device Apple frameworks.</p>
 
         <h2>Contact</h2>
-        <p>If you have questions about this privacy policy, please contact <a
-                href="mailto:chains_grout_6k@icloud.com">chains_grout_6k@icloud.com</a>.</p>
+        <p>If you have questions about this privacy policy, please contact <a href="#" class="contact-email"
+                data-u="info" data-d="filamentlabs.io">info (at) filamentlabs (dot) io</a>.</p>
 
         <p style="margin-top: 40px; color: rgba(255,255,255,0.25); font-size: 0.85rem;">© 2026 Filament Labs</p>
     </div>
     <!-- Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
         data-cf-beacon='{"token": "7cea3e29f5fa4268ba15d59e503fd821"}'></script><!-- End Cloudflare Web Analytics -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var links = document.querySelectorAll('.contact-email');
+            links.forEach(function (link) {
+                var u = link.getAttribute('data-u');
+                var d = link.getAttribute('data-d');
+                if (u && d) {
+                    var email = u + '@' + d;
+                    link.href = 'mailto:' + email;
+                    link.textContent = email;
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

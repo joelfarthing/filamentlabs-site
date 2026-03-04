@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'none'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://filamentlabs.io; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'none'; frame-ancestors 'none';">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 — Page Not Found | Filament Labs</title>
     <meta name="description" content="This page doesn't exist. But here's a window back.">
@@ -88,20 +90,20 @@
 
     <script>
         (function () {
-            var canvas = document.getElementById('errorSparkline');
+            const canvas = document.getElementById('errorSparkline');
             if (!canvas) return;
-            var ctx = canvas.getContext('2d');
-            var dpr = window.devicePixelRatio || 1;
-            var rect = canvas.getBoundingClientRect();
+            const ctx = canvas.getContext('2d');
+            const dpr = window.devicePixelRatio || 1;
+            const rect = canvas.getBoundingClientRect();
             canvas.width = rect.width * dpr;
             canvas.height = rect.height * dpr;
             ctx.scale(dpr, dpr);
 
-            var w = rect.width, h = rect.height, pad = 6;
-            var points = [];
-            for (var i = 0; i < 30; i++) points.push(Math.random());
+            const w = rect.width, h = rect.height, pad = 6;
+            const points = [];
+            for (let i = 0; i < 30; i++) points.push(Math.random());
 
-            var grad = ctx.createLinearGradient(0, 0, w, 0);
+            const grad = ctx.createLinearGradient(0, 0, w, 0);
             grad.addColorStop(0, 'rgba(51, 142, 247, 0)');
             grad.addColorStop(0.3, 'rgba(51, 142, 247, 0.7)');
             grad.addColorStop(0.7, 'rgba(255, 124, 30, 0.7)');
@@ -111,14 +113,14 @@
             ctx.lineWidth = 1.5;
             ctx.lineJoin = 'round';
             ctx.beginPath();
-            var step = w / (points.length - 1);
-            for (var i = 0; i < points.length; i++) {
-                var x = i * step;
-                var y = pad + (1 - points[i]) * (h - pad * 2);
+            const step = w / (points.length - 1);
+            for (let i = 0; i < points.length; i++) {
+                const x = i * step;
+                const y = pad + (1 - points[i]) * (h - pad * 2);
                 if (i === 0) ctx.moveTo(x, y);
                 else {
-                    var px = (i - 1) * step;
-                    var py = pad + (1 - points[i - 1]) * (h - pad * 2);
+                    const px = (i - 1) * step;
+                    const py = pad + (1 - points[i - 1]) * (h - pad * 2);
                     ctx.quadraticCurveTo(px, py, (px + x) / 2, (py + y) / 2);
                 }
             }
