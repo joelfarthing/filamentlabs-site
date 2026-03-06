@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="287.0" height="170.5"
+     viewBox="0 0 287.0 170.5">
+  <!-- Filament trace: single Bézier path, origin-normalized -->
+  <path d="M 10.00,160.50 C 12.58,159.36 64.78,135.29 90.00,125.00 C 112.11,115.98 133.28,110.35 153.00,101.50 C 171.45,93.22 189.84,83.38 205.00,74.00 C 217.69,66.15 228.43,58.18 238.50,50.00 C 247.55,42.65 256.20,34.78 263.00,27.50 C 268.58,21.52 276.19,11.02 277.00,10.00"
+        fill="none"
+        stroke="#000000"
+        stroke-width="2.0"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+</svg>
