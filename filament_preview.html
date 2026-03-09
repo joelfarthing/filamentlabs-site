@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filament Labs Logo Preview - Lockups</title>
+    <!-- Importing modern display fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #0d1117;
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            text-align: center;
+            background: #161b22;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            max-width: 800px;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-weight: 400;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #e2e8f0;
+        }
+
+        p {
+            color: #8b949e;
+            line-height: 1.5;
+            margin-bottom: 40px;
+        }
+
+        .option-box {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 50px 20px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .option-label {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #8b949e;
+        }
+
+        /* Lockup 1: Classic Underline (Outfit) */
+        .lockup-1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Outfit', sans-serif;
+            position: relative;
+        }
+
+        .lockup-1 .text-part {
+            font-size: 42px;
+            font-weight: 500;
+            letter-spacing: 4px;
+            color: #ffffff;
+            z-index: 2;
+        }
+
+        .lockup-1 .trace-container {
+            width: 420px;
+            height: 160px;
+            margin-top: -60px;
+            /* pull the trace up under the text */
+            z-index: 1;
+        }
+
+        /* Lockup 2: The Interlock (Space Grotesk) */
+        .lockup-2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Space Grotesk', sans-serif;
+            position: relative;
+            height: 200px;
+        }
+
+        .lockup-2 .text-filamentlabs {
+            font-size: 38px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: #ffffff;
+            z-index: 2;
+        }
+
+        .lockup-2 .text-io {
+            font-size: 38px;
+            font-weight: 300;
+            color: #8b949e;
+            z-index: 2;
+            margin-top: -30px;
+        }
+
+        .lockup-2 .trace-container {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 380px;
+            height: 140px;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Setup our shared SVG filters and gradients -->
+    <svg width="0" height="0" style="position: absolute;">
+        <defs>
+            <!-- Neon Gradient -->
+            <linearGradient id="neonGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#38bdf8" />
+                <stop offset="40%" stop-color="#3b82f6" />
+                <stop offset="100%" stop-color="#f97316" />
+            </linearGradient>
+
+            <!-- HRVSpark Blue Glow shadow filter -->
+            <filter id="hrvspark-glow" x="-50%" y="-50%" width="200%" height="200%">
+                <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#338cff" flood-opacity="1.0"
+                    result="shadow1" />
+                <feDropShadow dx="0" dy="0" stdDeviation="13" flood-color="#338cff" flood-opacity="0.7"
+                    result="shadow2" />
+                <feDropShadow dx="0" dy="0" stdDeviation="23" flood-color="#338cff" flood-opacity="0.5"
+                    result="shadow3" />
+                <feMerge>
+                    <feMergeNode in="shadow3" />
+                    <feMergeNode in="shadow2" />
+                    <feMergeNode in="shadow1" />
+                    <feMergeNode in="SourceGraphic" />
+                </feMerge>
+            </filter>
+        </defs>
+    </svg>
+
+    <div class="container">
+        <h2>Typographic Lockups (FF2O3V-003)</h2>
+        <p>Using the longer, flatter trace of FF2O3V-003 to ground the typography. The trace utilizes the exact HRVSpark
+            stroke rendering (white core, 3-tier blue glow).</p>
+
+        <!-- Option A -->
+        <div class="option-box">
+            <div class="option-label">Idea A: The Hero Stack (Outfit Font)</div>
+            <div class="lockup-1">
+                <div class="text-part">FILAMENT LABS</div>
+                <div class="trace-container">
+                    <!-- Rotate slightly to level out the long tail -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 200" width="100%" height="100%"
+                        overflow="visible">
+                        <g transform="translate(10, 80) scale(1.1) rotate(10, 129, 70)">
+                            <path
+                                d="M 10.00,129.50 C 12.49,128.71 56.97,115.06 82.50,106.50 C 111.42,96.81 150.57,84.80 174.50,74.00 C 190.79,66.65 203.22,60.24 214.00,52.00 C 222.99,45.13 230.09,37.06 236.00,29.50 C 241.04,23.05 247.31,11.12 248.00,10.00"
+                                fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"
+                                stroke-linejoin="round" filter="url(#hrvspark-glow)" />
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Option B -->
+        <div class="option-box">
+            <div class="option-label">Idea B: The Interlocking ".io" (Space Grotesk Font)</div>
+            <div class="lockup-2">
+                <div class="text-filamentlabs">filamentlabs</div>
+                <div class="trace-container">
+                    <!-- Flatter angle so it slides right under the letters, whipping up towards the end -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160" width="100%" height="100%"
+                        overflow="visible">
+                        <g transform="translate(-10, 60) scale(1.1) rotate(20, 129, 70)">
+                            <path
+                                d="M 10.00,129.50 C 12.49,128.71 56.97,115.06 82.50,106.50 C 111.42,96.81 150.57,84.80 174.50,74.00 C 190.79,66.65 203.22,60.24 214.00,52.00 C 222.99,45.13 230.09,37.06 236.00,29.50 C 241.04,23.05 247.31,11.12 248.00,10.00"
+                                fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round"
+                                stroke-linejoin="round" filter="url(#hrvspark-glow)" />
+                        </g>
+                    </svg>
+                </div>
+                <!-- The .io is placed next to the upward whipping tail of the trace -->
+                <div class="text-io" style="margin-left: 15px; margin-top: -60px;">.io</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Wandering Filament - Shakespeare Quarterly Mockup</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+        
+        body {
+            font-family: 'Crimson Text', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            max_width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background: #fff;
+        }
+        
+        @page {
+            size: letter;
+            margin: 1in;
+            @top-center {
+                content: "SHAKESPEARE QUARTERLY";
+                font-family: 'Crimson Text', serif;
+                font-size: 9pt;
+                font-variant: small-caps;
+            }
+            @bottom-center {
+                content: counter(page);
+                font-family: 'Crimson Text', serif;
+                font-size: 10pt;
+            }
+        }
+
+        /* Typography */
+        h1.article-title {
+            font-size: 24pt;
+            text-align: center;
+            font-weight: normal;
+            margin-bottom: 0.5em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .author-name {
+            text-align: center;
+            font-size: 12pt;
+            font-variant: small-caps;
+            margin-bottom: 2em;
+            display: block;
+            width: 100%;
+        }
+        
+        h2 {
+            font-size: 14pt;
+            font-variant: small-caps;
+            text-align: center;
+            margin-top: 2em;
+            margin-bottom: 1em;
+            font-weight: normal;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5em;
+            display: inline-block;
+            min-width: 50%;
+            margin-left: 25%;
+        }
+        
+        h3 {
+            font-size: 12pt;
+            font-style: italic;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            font-weight: normal;
+        }
+        
+        p {
+            text-align: justify;
+            text-indent: 2em;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+        
+        p + p {
+            margin-top: 0;
+        }
+        
+        /* First paragraph after header - no indent */
+        h1 + p, h2 + p, h3 + p {
+            text-indent: 0;
+        }
+
+        blockquote {
+            margin: 1.5em 2em;
+            font-size: 11pt;
+        }
+        
+        /* Figures */
+        .figure-box {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 2em 0;
+            background: #f9f9f9;
+            font-family: sans-serif;
+            font-size: 0.9em;
+            text-align: center;
+            page-break-inside: avoid;
+        }
+        
+        .figure-box strong {
+            font-family: 'Crimson Text', serif;
+            font-weight: bold;
+            font-variant: small-caps;
+        }
+        
+        /* Notes */
+        .notes-section {
+            margin-top: 3em;
+            border-top: 1px solid #333;
+            padding-top: 1em;
+            font-size: 10pt;
+        }
+        
+        .notes-section h2 {
+            text-align: left;
+            margin-left: 0;
+            border: none;
+            font-size: 12pt;
+        }
+        
+        .notes-section ol {
+            padding-left: 1.5em;
+        }
+        
+        .notes-section li {
+            margin-bottom: 0.5em;
+            text-align: left;
+        }
+        
+        sup.footnote-ref {
+            font-size: 0.7em;
+            vertical-align: super;
+        }
+        
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        /* Abstract styling */
+        .abstract {
+            font-size: 10pt;
+            margin: 2em 4em;
+            text-align: justify;
+            text-indent: 0;
+        }
+        
+        hr.section-break {
+            border: 0;
+            text-align: center;
+            margin: 2em 0;
+        }
+        hr.section-break:after {
+            content: "***";
+            font-size: 14pt;
+        }
+
+    </style>
+</head>
+<body onload="window.print()">
+
+    <h1 class="article-title">The Wandering Filament: Geometric Evidence for Sequential Printing in the Shakespeare First Folio</h1>
+<p><strong>JOEL ISAAC FARTHING</strong></p>
+<p><em></em>*</p>
+<p><strong>ABSTRACT</strong></p>
+<p>We report on a filament defect—likely a hair trapped in the printing forme—that left a curved ink imprint on leaf 2o3v (<em>Hamlet</em>, Act 2) across all examined copies of the Shakespeare First Folio (1623). Semi-automated tracing and geometric analysis of 55 copies from 23 institutions reveals that the filament's position underwent a monotonic, directional drift consistent with progressive deformation during sequential printing. Principal Component Analysis of the resampled shape vectors identifies a dominant "Primary Drift Component" (PC1, 73.3% of variance) that correlates almost perfectly with horizontal displacement (<span class="math">\rho = 0.984</span>). Hierarchical clustering detects distinct stability plateaus, the largest comprising 23 copies (42% of the dataset) with low internal geometric variance—evidence for an uninterrupted "long run" of press work. While absolute chronology cannot be reconstructed from this evidence alone, the filament’s progressive distortion offers a novel, localized physical indicator of relative printing sequence within this specific forme (2o3v), independent of and complementary to traditional bibliographic evidence.</p>
+<p><em></em>*</p>
+<p>The printing chronology of the Shakespeare First Folio (London, 1623; STC 22273) has been reconstructed principally through analysis of type damage, compositorial spellings, paper stocks, and press variants.<sup class="footnote-ref"><a href="#fn1">1</a></sup> These approaches operate at the level of formes, quires, or compositors, recovering a coarse ordering of the book's production. Fine-grained evidence for the order of individual impressions within a single forme—i.e., the sequence in which sheets passed through the press on a given day—has remained elusive.</p>
+<p>This study concerns a different class of evidence: a recurring physical defect on leaf 2o3v, which carries the running title "Prince of Denmarke" above <em>Hamlet</em> Act 2, Scene 2. Visible in high-resolution digital surrogates as a faint curved line traversing the headline area, this mark appears to be the impression of a hair or fibre trapped between the type and the tympan during printing. Unlike type damage, which accumulates discretely and often ambiguously, a filament embedded in the forme is subject to continuous mechanical forces—the pressure of impression, the action of ink balls, the vibration of the press—that cause it to migrate and deform gradually over the course of a print run.</p>
+<div class="figure-box"><strong>Figure 1.</strong> The Filament In Situ. High-resolution crop of Leaf 2o3v (Folger Copy 5, FF2O3V-005) showing the filament mark traversing the running title area of <em>Hamlet</em>.</div>
+<p>If the filament’s geometric change is monotonic, then its shape in a given copy may encode information about that copy’s relative position within the printing sequence. In this sense, the filament functions as a potential ordering signal. We test this hypothesis through geometric morphometrics applied to 55 independently sourced copies of leaf 2o3v, spanning collections in North America, Europe, and Australasia.</p>
+<h2>I. Materials and Methods</h2>
+<h3>Corpus Assembly</h3>
+Digital images of leaf 2o3v were collected from 23 institutions, including the Folger Shakespeare Library (Washington, D.C.), the Bodleian Library (Oxford), the Brotherton Library (Leeds), and the Württembergische Landesbibliothek (Stuttgart), among others. Images were sourced via IIIF manifests, institutional APIs, and direct correspondence, with resolutions ranging from approximately 300 to over 600 pixels per inch. Of 57 images initially collected, two were excluded: FF2O3V-012 (a Norton facsimile with insufficient resolution) and FF2O3V-053 (a partial leaf from the Harry Ransom Center that failed geometric registration). The analysed corpus comprises 55 copies.<sup class="footnote-ref"><a href="#fn2">2</a></sup>
+<div class="figure-box"><strong>Figure 9 (Supplementary).</strong> Global Distribution Map. World map showing the geographic locations of the 23 institutions contributing copies. Markers colored by cluster or chronological rank.</div>
+<h3>Image Normalisation</h3>
+To isolate filament deformation from global differences in imaging conditions (scale, rotation, tonal response), all images were dynamically registered to a reference standard (Folger Copy 5, FF2O3V-005) using SIFT/ORB feature matching with RANSAC outlier rejection. The registration produced affine transformations mapping each image to a common <span class="math">1000 \times 340</span> pixel crop of the headline region. Thirteen images that initially produced degenerate warps (due to false-positive feature matches) were corrected by manual anchor-point definition (six corresponding letterforms per image). The quality of registration was validated through composite overlays and a median-subtracted Median Absolute Deviation (MAD) heatmap, which revealed the filament drift signal with high clarity against suppressed invariant text.
+<h3>Filament Tracing</h3>
+Three automated centreline extraction methods were tested—median edge subtraction, multi-scale Hessian ridge filtering, and Hessian filtering on median-subtracted crops—and all failed. At <span class="math">1000 \times 340</span> pixel resolution, the filament mark is approximately 1–2 pixels wide with a grey-level contrast of 5–15 levels against the paper grain, placing it below the single-image noise floor for automated segmentation. The filament signal is recoverable only through statistical aggregation across copies (as in the variance heatmap) or through direct human visual inspection.
+<p>Filament centrelines were therefore extracted semi-automatically. An operator traced each filament path using a Wacom pen tablet in a purpose-built browser tool, clicking 5–15 control points along the visible mark. Control points were interpolated with parametric cubic B-splines and resampled to 100 equidistant arc-length-parameterised points. All 55 images were traced in a single session (approximately 15 minutes). The traced data were validated by comparing a composite overlay of all 55 traces against the MAD variance heatmap; trace positions correspond precisely to the high-variance filament region.</p>
+<div class="figure-box"><strong>Figure 2.</strong> Filament Composite Overlay (55 Traces). All 55 hand-traced filament centerlines overlaid on the median composite of the normalized crops. Traces colored by cluster assignment (5-cluster cut).</div>
+<h3>Shape Analysis</h3>
+Each resampled trace was represented as a 200-dimensional vector (100 <span class="math">x</span>-<span class="math">y</span> coordinate pairs). A Generalised Procrustes Analysis (GPA) was performed to remove residual translation and rotation differences between traces. The aligned shapes were then analysed through:
+<p>1.  <strong>Principal Component Analysis (PCA):</strong> Applied to the flattened coordinate matrix (<span class="math">55 \times 200</span>) to identify the dominant axes of shape variation. The first principal component (PC1) was tested as a candidate for the "Primary Drift Component" via Spearman rank correlation against geometric summary features.
+2.  <strong>Hierarchical Clustering:</strong> Ward's minimum-variance method was applied to <span class="math">z</span>-score-normalised summary features (start/end coordinates, arc length, mean curvature) to detect groups of geometrically similar copies—"stability plateaus" indicating periods of uninterrupted press work.
+3.  <strong>Pairwise Distance Metrics:</strong> Euclidean, Dynamic Time Warping (DTW), discrete Fréchet, and Procrustes distances were computed between all pairs of traces to validate that clustering results were robust across metric choice.</p>
+<div class="figure-box"><strong>Figure 8 (Supplementary).</strong> Distance Matrices. Four-panel heatmap showing pairwise distances between all 55 shapes using Euclidean, DTW, Fréchet, and Procrustes metrics.</div>
+<h2>II. Results</h2>
+<h3>Persistent Presence</h3>
+The filament mark was identified and traced in all 55 copies examined. Arc lengths ranged from 155 to 350 pixels. The mark's universality and geometric consistency across copies from 23 independent collections confirms it as a persistent feature of the printing surface rather than a transient debris artefact or image processing artefact.
+<h3>A Dominant Axis of Variation</h3>
+PCA of the aligned shape vectors reveals that the first principal component accounts for 73.3% of total shape variance. The first two components together account for 97.9%, indicating that the filament's variability is overwhelmingly low-dimensional. When traces are projected onto PC1 and PC2, a dense central cluster and a small number of geometric outliers (FF2O3V-042, 028, 032, 035) are visible (Figure 3).
+<div class="figure-box"><strong>Figure 3.</strong> PCA Shape Projection. Scatter plot of PC1 vs PC2 from full-shape PCA (100-point resampled traces, Procrustes-aligned). Points labeled with record short IDs. PC1 explains 73.3% of variance; first two components explain 97.9%.</div>
+<h3>Monotonic Drift</h3>
+The PC1 scores correlate with geometric summary features as follows (Spearman <em>ρ</em>, all <span class="math">n = 55</span>):
+<ul><li>  <strong>Centroid <span class="math">x</span></strong>: <span class="math">\rho = 0.984</span>, <em>p</em> < 10<sup>-40</sup> (Drift is overwhelmingly horizontal)</li><li>  <strong>Arc length</strong>: <span class="math">\rho = 0.726</span>, <span class="math">p < 10^{-9}</span> (Filament elongated along the Primary Drift Component)</li><li>  <strong>Tortuosity</strong>: <span class="math">\rho = -0.064</span>, n.s. (Shape complexity unchanged)</li><li>  <strong>Centroid <span class="math">y</span></strong>: Weak or absent vertical component</li></ul>
+<p>The near-perfect correlation with centroid <span class="math">x</span> confirms that PC1 represents a unidirectional horizontal displacement. The gradient overlay (Figure 4) provides visual confirmation: traces coloured by PC1 rank form a smooth spectral sweep across the crop window, consistent with the filament migrating steadily from left to right (or equivalently, from right to left, since direction is relative) across the forme during the print run.</p>
+<div class="figure-box"><strong>Figure 4.</strong> Chronological Gradient Overlay. All 55 traces overlaid on the median composite, colored by predicted chronological rank (purple = early, yellow = late). Every 5th trace bolded for legibility.</div>
+<div class="figure-box"><strong>Figure 5.</strong> Feature Trend Plots (PC1 Correlations). Four-panel plot. (a) PC1 vs centroid <span class="math">x</span> (<span class="math">\rho = 0.984</span>); (b) PC1 vs arc length (<span class="math">\rho = 0.726</span>); (c) PC1 vs tortuosity (<span class="math">\rho = -0.064</span>); (d) PC1 vs centroid <span class="math">y</span>.</div>
+<h3>Stability Plateaus</h3>
+Hierarchical clustering (Ward's method, 12-cluster cut) identifies one dominant cluster comprising 23 copies (42% of the dataset), designated the "Long Run" (Cluster 9). Within this cluster, the <span class="math">x</span>-coordinate of the filament start point varies by only ~15 pixels, compared to a full-dataset range exceeding 200 pixels. This low internal variance implies that the filament position was effectively stable across these 23 impressions—consistent with a sustained, uninterrupted sequence of press work.
+<p>A secondary stable cluster (Cluster 10) contains 6 copies with a distinct position and curvature profile. Several transitional copies (e.g., FF2O3V-032, 042, 046) are geometric singletons that cluster poorly—likely capturing the filament at moments of active displacement between stability states.</p>
+<p>The block-diagonal structure observed in the pairwise distance matrices (DTW, Fréchet, Procrustes) corroborates this picture: the same groups emerge regardless of the distance metric employed.</p>
+<div class="figure-box"><strong>Figure 6.</strong> Stability Dendrogram (Ward Clustering). Hierarchical clustering dendrogram (Ward's method, z-score normalized geometric features). Highlights the "Long Run" cluster (23 copies) as the dominant branch.</div>
+<div class="figure-box"><strong>Figure 7.</strong> Geometry Scatter Plot (Arc Length vs Mean Curvature). Scatter plot of arc length vs mean curvature, colored by cluster (5-cluster cut). Points labeled with short IDs.</div>
+<h3>A Candidate Relative Ordering</h3>
+Ranking the 55 copies by PC1 score produces a candidate relative ordering consistent with progressive geometric drift. Copies at one extreme (FF2O3V-042, 034, 054, 001) exhibit compact, left-shifted filament positions; copies at the other extreme (FF2O3V-038, 023, 026, 010, 006) are elongated and right-shifted. The Long Run occupies the middle ranks, consistent with its interpretation as the longest uninterrupted printing sequence.
+<p>This ordering is relative, not absolute. We cannot determine which extreme corresponds to the beginning of the run without external evidence (e.g., correlation with known type-damage sequences or paper-stock changes). The direction of the drift is irrecoverable from geometric data alone.</p>
+<h2>III. Discussion</h2>
+<h3>Mechanism</h3>
+The filament's behaviour is best characterised as a slow, systematic drift punctuated by discrete jumps between stability plateaus. The drift component is captured by PC1 (a smooth monotonic trend); the jumps are captured by the clustering structure (tight groups separated by geometric discontinuities). These two observations are not in tension—they describe the same process at different scales. Over the full run, the filament migrated directionally; within that overall trajectory, it spent most of its time locked in a small number of stable configurations.
+<p>The correlation with arc length (<span class="math">\rho = 0.726</span>) admits two physical interpretations: (i) the filament physically stretched under the repeated compressive force of impression, or (ii) it progressively re-seated at a more oblique angle across the fixed crop window, geometrically lengthening the visible trace without material deformation. Analysis of uncropped images, where the filament may extend beyond the current crop boundary, would disambiguate these hypotheses. Both mechanisms are consistent with the observed monotonicity.</p>
+<p>The null result for tortuosity (<span class="math">\rho = -0.064</span>) is informative: the filament moved and lengthened, but it did not buckle, kink, or become more complex in shape. This is consistent with a fibre under tension—an unconstrained fibre subject to random impingements would be expected to develop increasing tortuosity over time.</p>
+<h3>Relationship to Existing Chronologies</h3>
+The filament chronometer operates at a different scale from Hinman's compositor-based analysis, which reconstructs the order of formes and quires across the entire Folio. The filament evidence applies exclusively to the inner forme of quire <span class="math">oo</span>, leaf 2o3v. Within that scope, it may provide finer local resolution than traditional methods—potentially distinguishing between impressions within a single forme’s run.
+<p>To link the filament-based relative ordering to Hinman's framework, one would need to identify copies whose printing-sequence position is independently constrained (e.g., through watermark evidence, identifiable paper stocks, or datable type damage in other formes of the same sheet). This correlation remains future work.</p>
+<h3>Limitations</h3>
+First, our 55 copies represent approximately 4–7% of the estimated 750–1,500 copies printed.<sup class="footnote-ref"><a href="#fn3">3</a></sup> The true printing sequence may include stability plateaus and transitional states not represented in our sample.
+<p>Second, semi-automated hand tracing introduces a human low-pass filter. Operator consistency was not formally assessed across sessions, though all tracing was performed in a single session to minimise intra-operator variability.</p>
+<p>Third, despite dynamic registration, sub-pixel alignment errors remain. These contribute noise to the shape vectors but cannot produce the systematic trends observed.</p>
+<p>Fourth, replacement leaves inserted during 17th- or 18th-century rebinding would appear as anomalous outliers in the geometric analysis. Our singleton copies (e.g., FF2O3V-042) could include such cases, though we have no provenance evidence to confirm or exclude this.</p>
+<p>Finally, the filament evidence establishes a relative ordering but cannot determine its polarity: we know the sequence but not which end is "first."</p>
+<h2>IV. Conclusion</h2>
+<p>The "wandering filament" of leaf 2o3v is a verifiable, continuously evolving physical defect that appears to encode information consistent with the relative order of printing within a single forme of the Shakespeare First Folio. Its monotonic drift (PC1 = 73.3%, <span class="math">\rho_{\text{centroid}} = 0.984</span>) and discrete stability plateaus (the "Long Run" of 23 copies) suggest that geometric morphometrics may recover printing-sequence information from features previously dismissed as minor blemishes. While its scope is localised to one forme and its chronology is relative, the wandering filament illustrates the untapped potential of micro-defect analysis in analytical bibliography.</p>
+<p><em></em>*</p>
+<p><strong>Notes</strong></p>
+<p><sup class="footnote-ref"><a href="#fn1">1</a></sup>: Charlton Hinman, <em>The Printing and Proof-Reading of the First Folio of Shakespeare</em>, 2 vols. (Oxford: Clarendon Press, 1963); Peter W. M. Blayney, <em>The First Folio of Shakespeare</em> (Washington, D.C.: Folger Shakespeare Library, 1991).</p>
+<p><sup class="footnote-ref"><a href="#fn2">2</a></sup>: See Table S1 (Supplementary Materials) for full corpus listing with institution, shelfmark/copy number, IIIF source URL, and registration method.</p>
+<p><sup class="footnote-ref"><a href="#fn3">3</a></sup>: Blayney, <em>The First Folio of Shakespeare</em>.</p>
+
+</body>
+</html>
+    
