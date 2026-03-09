@@ -1,0 +1,67 @@
+/* ===================================
+   HRVSpark Prod — Background Watch Parallax
+   =================================== */
+
+#background-watch-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+#background-watch-wrap.active {
+    opacity: 0.70;
+    visibility: visible;
+}
+
+
+#watch-canvas {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(0.72) translateZ(0);
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+/* Loader */
+#loader {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: opacity 0.4s;
+}
+
+#loader.hidden {
+    opacity: 0;
+}
+
+/* Ensure content on top stays cleanly legible */
+#watch-trigger-zone {
+    position: relative;
+    z-index: 10;
+}
+
+#watch-trigger-zone section {
+    position: relative;
+    /* Adding subtle backdrop blur blocks to sections is an option if contrast is too low
+       but user requested 67% alpha which might just work directly */
+}

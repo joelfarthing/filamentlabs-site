@@ -19,7 +19,7 @@
     --accent-glow: rgba(51, 142, 247, 0.15);
     --accent-orange: #ff7c1e;
     --border: rgba(255, 255, 255, 0.06);
-    --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-brand: 'Zen Tokyo Zoo', cursive;
     --radius-sm: 8px;
     --radius-md: 16px;
@@ -58,7 +58,7 @@
    Base
    ---------------------------------------- */
 html {
-    font-size: 16px;
+    font-size: 17.6px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -484,7 +484,9 @@ section h2 {
 }
 
 .feature-card {
-    background: var(--bg-card);
+    background: rgba(10, 10, 15, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
     padding: 24px;
@@ -558,7 +560,9 @@ section h2 {
     border-left: 2px solid var(--accent-blue);
     padding: 20px 24px;
     margin: 32px 0;
-    background: var(--bg-card);
+    background: rgba(10, 10, 15, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-radius: 0 12px 12px 0;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
@@ -596,6 +600,21 @@ section h2 {
 /* ----------------------------------------
    CTA / App Store Block
    ---------------------------------------- */
+.app-store-badge {
+    height: 48px;
+    width: auto;
+    display: block;
+    border-radius: 8px;
+    /* Matches Apple's SVG corners */
+    filter: drop-shadow(0 0 4px rgba(51, 140, 255, 0.4)) drop-shadow(0 0 13px rgba(51, 140, 255, 0.2)) drop-shadow(0 0 23px rgba(51, 140, 255, 0.1));
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.app-store-badge:hover {
+    transform: translateY(-2px);
+    filter: drop-shadow(0 0 6px rgba(51, 140, 255, 0.6)) drop-shadow(0 0 16px rgba(51, 140, 255, 0.4)) drop-shadow(0 0 30px rgba(51, 140, 255, 0.3));
+}
+
 .cta-block {
     text-align: center;
     padding: 60px 0;

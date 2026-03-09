@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRVSpark — Your HRV. Raw. Beautiful. On Your Wrist.</title>
+    <meta name="description" content="HRVSpark reverses the usual HRV app flow. Raw SDNN sparklines and gauges on your Apple Watch face, across four time windows. Complication-first design. No verdicts. No subscriptions.">
+
+    <!-- OG / Social -->
+    <meta property="og:title" content="HRVSpark — Raw HRV on Your Watch Face">
+    <meta property="og:description" content="Complication-first HRV. Raw SDNN sparklines and gauges across four time windows. A window, not a verdict.">
+    <meta property="og:image" content="https://filamentlabs.io/images/og-hrvspark.png">
+    <meta property="og:url" content="https://filamentlabs.io/hrvspark/promo/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-brand">hrv<span class="loader-slash">/</span>spark</div>
+        <div class="loader-progress">
+            <div id="loader-bar"></div>
+        </div>
+        <div id="loader-percent">0%</div>
+    </div>
+
+    <!-- Fixed Header -->
+    <header class="site-header">
+        <nav>
+            <a href="/hrvspark/" class="header-logo">hrv<span class="logo-slash">/</span>spark</a>
+            <div class="header-links">
+                <a href="/hrvspark/">Product</a>
+                <a href="/hrvspark/privacy.html">Privacy</a>
+                <a href="/" class="header-brand">Filament Labs</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero: Standalone 100vh section -->
+    <section class="hero-standalone">
+        <div class="hero-content">
+            <span class="section-label">001 / Introducing</span>
+            <h1 class="hero-heading">
+                <span class="word">Your</span>
+                <span class="word">HRV.</span>
+                <span class="word accent-blue">Raw.</span>
+                <span class="word accent-orange">Beautiful.</span>
+            </h1>
+            <p class="hero-tagline">On your wrist.</p>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M19 12l-7 7-7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Canvas: Fixed, renders video frames -->
+    <div class="canvas-wrap">
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <!-- Dark Overlay for stats section -->
+    <div id="dark-overlay"></div>
+
+    <!-- Marquee layers -->
+    <div class="marquee-wrap" data-scroll-speed="-25">
+        <div class="marquee-text">DATA WITHOUT THE VERDICT · COMPLICATION-FIRST · RAW SDNN ·&nbsp;</div>
+    </div>
+    <div class="marquee-wrap marquee-lower" data-scroll-speed="15">
+        <div class="marquee-text">hrv/spark · hrv/spark · hrv/spark · hrv/spark · hrv/spark ·&nbsp;</div>
+    </div>
+
+    <!-- Scroll Container -->
+    <div id="scroll-container">
+
+        <!-- Section 1: A Window, Not a Verdict -->
+        <section class="scroll-section section-content align-left"
+                 data-enter="12" data-leave="26" data-animation="slide-left">
+            <div class="section-inner">
+                <span class="section-label">002 / Philosophy</span>
+                <h2 class="section-heading">A window,<br>not a verdict.</h2>
+                <p class="section-body">Most HRV apps bury your data under readiness scores, color codes, and algorithmic opinions. HRVSpark shows you the raw signal — SDNN sparklines and gauges — right on your watch face. You learn to read your own patterns.</p>
+            </div>
+        </section>
+
+        <!-- Section 2: Complication-First -->
+        <section class="scroll-section section-content align-right"
+                 data-enter="24" data-leave="38" data-animation="slide-right">
+            <div class="section-inner">
+                <span class="section-label">003 / Architecture</span>
+                <h2 class="section-heading">Complication-first.</h2>
+                <p class="section-body">Your HRV lives on the watch face — not buried three taps deep in an app. Ten complication styles across four time windows. Glance, absorb, move on.</p>
+            </div>
+        </section>
+
+        <!-- Section 3: Why Raw? -->
+        <section class="scroll-section section-content align-left"
+                 data-enter="36" data-leave="50" data-animation="clip-reveal">
+            <div class="section-inner">
+                <span class="section-label">004 / Why Raw</span>
+                <h2 class="section-heading">Reversed flow.</h2>
+                <p class="section-body">The usual path: data → opaque algorithm → verdict → you.<br><br>HRVSpark reverses it: <strong>data → you → intuition.</strong></p>
+                <p class="section-note">No readiness scores. No color codes. No algorithmic opinions standing between you and your data.</p>
+            </div>
+        </section>
+
+        <!-- Section 4: Stats -->
+        <section class="scroll-section section-stats"
+                 data-enter="50" data-leave="68" data-animation="stagger-up">
+            <div class="stats-grid">
+                <div class="stat">
+                    <span class="stat-number" data-value="10" data-decimals="0">0</span>
+                    <span class="stat-label">Complication styles</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-value="4" data-decimals="0">0</span>
+                    <span class="stat-label">Time windows</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-value="0" data-decimals="0">0</span>
+                    <span class="stat-label">Stress scores</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-value="2.99" data-decimals="2">0</span>
+                    <span class="stat-suffix">$</span>
+                    <span class="stat-label">One-time. No subscription.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Testimonial -->
+        <section class="scroll-section section-content align-right"
+                 data-enter="66" data-leave="80" data-animation="rotate-in">
+            <div class="section-inner">
+                <span class="section-label">005 / Voices</span>
+                <h2 class="section-heading">"I stopped needing<br>the algorithm's permission."</h2>
+                <p class="section-body">— Beta tester</p>
+                <p class="section-note">"I've used HRV apps for years. This is the first one that trusts me to interpret my own data."</p>
+            </div>
+        </section>
+
+        <!-- Section 6: CTA (persists) -->
+        <section class="scroll-section section-cta"
+                 data-enter="78" data-leave="100" data-animation="scale-up" data-persist="true">
+            <div class="section-inner cta-inner">
+                <span class="section-label">006 / Get It</span>
+                <h2 class="section-heading">Available on the<br>App Store.</h2>
+                <p class="section-body">One-time $2.99 Pro unlock. No subscription. No accounts. No cloud.</p>
+                <a href="https://apps.apple.com/app/hrvspark/id6742508007" class="cta-button" target="_blank" rel="noopener">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                    Download on the App Store
+                </a>
+                <a href="/hrvspark/privacy.html" class="privacy-link">Privacy Policy</a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- CDN Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
