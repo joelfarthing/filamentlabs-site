@@ -23,6 +23,12 @@
     visibility: visible;
 }
 
+@media (max-width: 767px) {
+    #background-watch-wrap {
+        display: none !important;
+    }
+}
+
 
 #watch-canvas {
     width: 100%;

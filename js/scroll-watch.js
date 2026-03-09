@@ -13,6 +13,12 @@
     const canvas = document.getElementById('watch-canvas');
     if (!canvas || !canvasWrap) return;
 
+    // Disable heavy frame loading and rendering on mobile devices (< 768px)
+    if (window.innerWidth < 768) {
+        canvasWrap.style.display = 'none';
+        return;
+    }
+
     const ctx = canvas.getContext('2d', { colorSpace: 'srgb' });
 
     let frames = [];
