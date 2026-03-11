@@ -2,7 +2,7 @@
 
 > Current state snapshot for session bootstrap. Deploy pipeline, conventions, and related workspaces are in User Rules (`filamentlabs-deploy-pipeline.md`).
 
-Updated: 2026-03-04 5:15 PM CST
+Updated: 2026-03-10 8:28 PM CST
 
 ---
 
@@ -10,23 +10,17 @@ Updated: 2026-03-04 5:15 PM CST
 
 | Area | State |
 |------|-------|
-| Site content | ✅ Phase 2 complete — homepage + HRVSpark product page + privacy policy |
+| Site content | ✅ Homepage + HRVSpark product page + privacy policy |
 | Copy tone | ✅ Complementary positioning ("Why Raw?", reversed-flow diagram, analysis-suite bridge) |
-| Testimonials | ✅ Three: beta tester (philosophy), physician (pattern validation), sports medicine physician |
-| Polish | ✅ Scroll-reveal animations, hover micro-interactions, breathing glow, responsive breakpoints |
-| Favicons | ✅ favicon.ico, favicon.svg, apple-touch-icon.png (dark-bg tilde+spark) |
-| SEO | ✅ sitemap.xml, robots.txt, JSON-LD ($2.99 **PreOrder**), canonical URLs, OG cards (1200×630) |
-| OG card | ✅ Real hero screenshot (replaced generated card), padded to 1200×630 |
-| Google Search Console | ✅ Verified, sitemap submitted, indexing requested |
-| Bing Webmaster Tools | ✅ Imported from GSC, sitemap submitted |
-| Cloudflare Web Analytics | ✅ RUM beacon on all pages (manual JS snippet) |
-| Lighthouse (product page) | ✅ Perf 89 · A11y 100 · BP 92 · SEO 100 |
-| Image optimization | ✅ All screenshots WebP with `<picture>` fallback (2.6MB → 155KB) |
-| Custom 404 | ✅ Branded page with sparkline decoration |
+| Website CTA | ✅ **DEPLOYED** — "Available on the App Store" + App Store badge + "No Subscription" tagline |
+| JSON-LD | ✅ **InStock** (flipped from PreOrder on launch day) |
+| SEO | ✅ sitemap.xml, robots.txt, JSON-LD, canonical URLs, OG cards |
+| OG card | ✅ New hero card with Zen Tokyo Zoo wordmark + watch complications |
+| Cloudflare Web Analytics | ✅ RUM beacon on all pages |
 | Brand email | ✅ `info@filamentlabs.io` via iCloud+ Custom Email Domain |
 | X (Twitter) | ✅ `@Filament_Labs` — branded, pinned tweet, bio set |
-| Product Hunt | ✅ Account created 3/3, 1-week wait active, community engagement started |
-| CSS cache version | **v=15** (all pages) |
+| Product Hunt | ✅ Launch page scheduled for **Wed March 11** |
+| CSS cache version | **v=17** (all pages) |
 
 ---
 
@@ -34,9 +28,11 @@ Updated: 2026-03-04 5:15 PM CST
 
 | Area | State |
 |------|-------|
-| Current build | **Build 18** (live on TestFlight) |
-| RC1 blockers | **ISS-032** (StoreKit monetization) — only remaining item |
+| Live version | **v1.0.1 (Build 21)** — live on App Store since March 10 evening |
+| App Store URL | `https://apps.apple.com/app/hrvspark/id6759590346` |
+| TestFlight | Build 20 expired |
 | Pricing | $2.99 one-time Pro IAP + $4.99 tip jar. No subscriptions |
+| iPad | Must remain supported (Apple "no device regression" policy). Real iPad screenshots now in ASC |
 | Issue tracker | `~/Library/Mobile Documents/com~apple~CloudDocs/Xcode Projects/notes/ISSUES.md` |
 
 ---
@@ -50,11 +46,12 @@ Updated: 2026-03-04 5:15 PM CST
 | Mon 3/3 | Copy edits, brand email, X account, OG card, PH engagement | ✅ Done |
 | Tue 3/4 | PH thumbnail + gallery images, RC polish, PH engagement | ✅ Done |
 | Wed 3/5 | PH gallery finish, PH maker comment draft | ✅ Done (pulled to 3/4) |
-| Thu 3/6 | RC finalization, App Store prep | ⬜ |
-| Fri 3/7 | App Store submission (manual release), PH launch page setup | ⬜ |
-| Sat 3/8 | Buffer day — monitor App Store review | ⬜ |
-| Sun 3/9 | Prepare website CTA swap + JSON-LD InStock (staged) | ⬜ |
-| Mon 3/10 | **App Store go-live**, deploy website updates, Reddit follow-ups | ⬜ |
+| Thu 3/5 | RC finalization, App Store submission | ✅ Done |
+| Fri 3/6–Sun 3/9 | App Store review + buffer days | ✅ Approved |
+| Sun 3/9 | PH launch page scheduled, website CTA swap staged | ✅ Done |
+| Mon 3/10 | **App Store go-live** ✅, website deployed ✅, v1.0.1 approved + released ✅ | ✅ Done |
+| Mon 3/10 PM | Video filmed + edited (FCP) ✅, uploaded to YouTube ✅, embedded on site ✅, X link added to footer ✅, PH listing updated (video + description) ✅ | ✅ Done |
+| Mon 3/10 (remaining) | Final PH gallery refresh (Photoshop), post teaser tweet | 🔲 In progress |
 | Wed 3/11 | **🚀 Product Hunt launch day** | ⬜ |
 | Thu 3/12 | Post-launch — PH badge, App Store reviews | ⬜ |
 
@@ -76,7 +73,7 @@ The product page has these sections in order. Understanding this avoids needing 
 | **Design Philosophy** | Creator quote (cold plunge/hot yoga/tvTENS patterns), beta tester quote, physician quotes (×2) |
 | **Who It's For** | 4 personas: self-experimenter, biohacker, HRV veteran, anxiety-conscious |
 | **Comparison Table** | "Analysis Apps" vs "hrv/spark" — 6 rows (readiness→raw, color-coded→neutral, etc.) |
-| **CTA** | ⚠️ Currently: "Coming Soon to the App Store" / "Currently in TestFlight beta." / TestFlight button + Privacy Policy button. **Swap on launch day (see §7).** |
+| **CTA** | App Store badge + PH badge (left) + YouTube video embed (right, 280px). Privacy Policy + Support links below badges. |
 
 ---
 
@@ -104,15 +101,10 @@ All PNGs have WebP counterparts. All are used on the product page with `<picture
 | PH tagline | 60 chars max: "Your HRV. Raw. Beautiful. On your wrist." (42 chars) | ✅ Drafted |
 | PH description | ~60 words — reversed-flow pitch, complication-first, $2.99, no subscription | ✅ Drafted (in LAUNCH_WEEK_TASKS.md) |
 | PH thumbnail | 240×240px — `images/ph-thumbnail.png` | ✅ Created (7.4KB, rsvg-convert + optipng) |
-| PH gallery images | 1270×760px, 5 slides — `images/ph-gallery-{1..5}*.png` | ✅ Created (131–164KB each) |
+| PH gallery images | 1270×760px, 5 slides — `images/ph-gallery-{1..5}*.png` | 🔲 Refreshing in Photoshop |
 | PH maker comment | ~200 words — `notes/ph_maker_comment.md` | ✅ Drafted + approved |
-
-**Planned gallery slides (1270×760):**
-1. Hero shot: iPhone + Watch side-by-side
-2. Watch face with complications in context
-3. "Why Raw?" value prop slide (text + sparkline visual)
-4. Feature highlights (10 complications / 4 time windows)
-5. Beta tester testimonial card
+| PH video | YouTube: `https://youtu.be/cgzhp7moZG0` (90s, silent, FCP) | ✅ Uploaded + linked |
+| PH description | Updated on PH listing directly | ✅ Updated |
 
 ---
 
@@ -125,7 +117,7 @@ filamentlabs.io/
 │   ├── index.html              # HRVSpark product page
 │   └── privacy.html            # Privacy policy
 ├── css/
-│   └── style.css               # Shared design system (v=15)
+│   └── style.css               # Shared design system (v=17)
 ├── js/
 │   └── main.js                 # Sparkline + IntersectionObserver scroll-reveal
 ├── images/                     # See §5 for full inventory
@@ -184,15 +176,31 @@ These changes are **prepared but not deployed** until App Store go-live:
 
 ---
 
-## 11. Open Items
+## 11. Immediate Next Tasks
+
+> **PH launches tonight (Wed March 11) at 12:01 AM PST / 2:01 AM CST.**
+
+1. **Refresh PH gallery slides** — Joel doing in Photoshop (1270×760px)
+2. **Post teaser tweet** on @Filament_Labs
+3. **Final PH launch page review** — verify maker comment, gallery order, tagline, App Store link
+4. **Set alarm or let PH auto-publish** at midnight PST / 2 AM CST
+
+## 12. Open Items
 
 - [x] PH thumbnail (240×240 from logo.svg) ✅
 - [x] PH gallery images (1270×760 × 5 slides) ✅
 - [x] PH maker comment draft (~200 words) ✅
-- [ ] PH launch page setup (after 1-week wait clears ~3/10)
-- [ ] Website CTA swap on launch day
-- [ ] JSON-LD availability flip on launch day
-- [ ] PH "Featured on Product Hunt" badge post-launch
+- [x] PH launch page setup ✅ (scheduled for March 11)
+- [x] Website CTA swap ✅ (deployed March 10)
+- [x] JSON-LD availability flip ✅ (InStock)
+- [x] YouTube video filmed, edited (FCP), uploaded ✅ (`https://youtu.be/cgzhp7moZG0`)
+- [x] Video embedded on website (CTA section) ✅
+- [x] @Filament_Labs X link added to footer ✅
+- [x] assets/ directory gitignored ✅
+- [x] v1.0.1 approved + released ✅
+- [x] App Store go-live ✅ (March 10)
+- [x] v1.0.1 marketing update submitted ✅ (Manual Release)
+- [ ] PH "Featured on Product Hunt" badge (post-launch)
 - [ ] Contact / Support page
 - [ ] Shakespeare project placeholder on homepage
 - [ ] Blog / dev log (organic SEO traffic)
@@ -200,7 +208,7 @@ These changes are **prepared but not deployed** until App Store go-live:
 
 ---
 
-## 12. System Tooling Notes
+## 13. System Tooling Notes
 
 - **ImageMagick** (`magick`) and **sips** are available for image conversion
 - **`gh`** CLI is installed and authenticated
@@ -211,7 +219,7 @@ These changes are **prepared but not deployed** until App Store go-live:
 
 ---
 
-## 13. Jules / AI Refactoring Notes
+## 14. Jules / AI Refactoring Notes
 
 - **Jules** is Google's automated code refiner. It generates patches and GitHub PRs.
 - **Jules CLI** (`jules`) is installed at `/opt/homebrew/bin/jules` and available in the environment.
