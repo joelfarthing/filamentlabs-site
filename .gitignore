@@ -21,3 +21,9 @@ Sync
 
 # Video/design assets (local only)
 assets/
+
+# Archive (old scripts, debug files)
+archive/
+
+# Shakespeare filament project (local data)
+Filament_Local_Mac/

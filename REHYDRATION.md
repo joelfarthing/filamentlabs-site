@@ -1,6 +1,8 @@
 # filamentlabs.io — Rehydration Guide
 
-> Current state snapshot for session bootstrap. Deploy pipeline, conventions, and related workspaces are in User Rules (`filamentlabs-deploy-pipeline.md`).
+> Current state snapshot for session bootstrap. Deploy pipeline, conventions, and related workspaces are in User Rule `filamentlabs-deploy-pipeline.md`.
+> AppStoreConnect CLI operations are in `~/Developer/filamentlabs-site/workflows/appstoreconnect-cli.md`
+> Actual Xcode app coding occurs in `~/Library/Mobile Documents/com~apple~CloudDocs/Xcode Projects/HRVSpark`
 
 Updated: 2026-03-10 8:28 PM CST
 
