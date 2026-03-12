@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <title>OG Card</title>
+    <style>
+        @font-face {
+            font-family: 'Dramatico';
+            src: url('fonts/DramaticoScript-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 1200px;
+            height: 630px;
+            background: #12100e;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Warm ambient glow */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 700px;
+            height: 400px;
+            background: radial-gradient(ellipse, rgba(200, 145, 90, 0.10) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .title {
+            font-family: 'Dramatico', cursive;
+            font-size: 72px;
+            font-weight: 400;
+            background: linear-gradient(135deg, #ede6dc, #c8915a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 0.02em;
+            line-height: 1.6;
+            padding: 20px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tagline {
+            font-family: 'Special Elite', 'Courier New', monospace;
+            font-size: 24px;
+            color: rgba(237, 230, 220, 0.55);
+            letter-spacing: 0.08em;
+            margin-top: 12px;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="title">Blackberry Hollow</div>
+    <div class="tagline">Acoustic Duo · Fayetteville, AR</div>
+</body>
+
+</html>
