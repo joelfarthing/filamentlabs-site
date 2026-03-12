@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Security-Policy"
-        content="default-src 'none'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://filamentlabs.io https://tools.applemediaservices.com https://api.producthunt.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://cloudflareinsights.com; frame-src https://www.youtube-nocookie.com; base-uri 'self'; form-action 'none'; frame-ancestors 'none';">
+        content="default-src 'none'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://filamentlabs.io https://tools.applemediaservices.com https://api.producthunt.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://cloudflareinsights.com; frame-src https://www.youtube-nocookie.com; base-uri 'self'; form-action 'none'; frame-ancestors 'none';">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HRVSpark — Your HRV. Raw. Beautiful. On Your Wrist.</title>
     <meta name="description"
@@ -38,7 +38,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="stylesheet" href="/css/style.css?v=17">
-    <link rel="stylesheet" href="/css/scroll-watch.css">
+
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -67,13 +67,6 @@
 </head>
 
 <body>
-    <!-- BACKGROUND WATCH -->
-    <div id="background-watch-wrap">
-        <canvas id="watch-canvas"></canvas>
-        <div id="loader">
-            Loading frames <span id="loader-percent">0%</span>
-        </div>
-    </div>
 
     <div class="container">
         <main>
@@ -154,7 +147,7 @@
 
             <hr class="divider">
 
-            <div id="watch-trigger-zone">
+
                 <!-- WHAT IT IS -->
                 <section>
                     <h2>A window, not a verdict.</h2>
@@ -383,7 +376,7 @@
                         </div>
                     </div>
                 </section>
-            </div>
+
         </main>
 
         <!-- FOOTER -->
@@ -394,11 +387,7 @@
         </footer>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
     <script src="/js/main.js"></script>
-    <script src="/js/scroll-watch.js?v=2"></script>
     <!-- Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
         data-cf-beacon='{"token": "7cea3e29f5fa4268ba15d59e503fd821"}'></script><!-- End Cloudflare Web Analytics -->
