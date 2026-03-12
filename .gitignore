@@ -11,6 +11,7 @@
 inbox/
 scripts/
 Sync symlink
+.agent_jobs/
 
 # Notes (keep out of the deployed site)
 notes/
