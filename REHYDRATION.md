@@ -210,7 +210,49 @@ These changes are **prepared but not deployed** until App Store go-live:
 
 ---
 
-## 13. System Tooling Notes
+## 13. CLI Analytics Scripts
+
+Two scripts in `scripts/` (gitignored) for quick terminal-based analytics.
+
+### Cloudflare Web Analytics (`scripts/cf-analytics.sh`)
+
+Queries filamentlabs.io page views via Cloudflare GraphQL API. Real-time data.
+
+```bash
+./scripts/cf-analytics.sh        # today only
+./scripts/cf-analytics.sh 7      # last 7 days
+```
+
+| Config | Value |
+|--------|-------|
+| API Token | Hardcoded (env var `CF_API_TOKEN` takes precedence) |
+| Account Tag | `e1970b73f1017ae989f8649fecb80e24` |
+| Site Tag (RUM) | `688d9187bb1c445eb498b06ac9c6960a` |
+
+### App Store Connect Sales (`scripts/asc-sales.sh`)
+
+Queries daily sales reports via ASC Sales & Trends API. Reports lag ~24h.
+
+```bash
+./scripts/asc-sales.sh             # yesterday (default)
+./scripts/asc-sales.sh 2026-03-11  # specific date
+```
+
+| Config | Value |
+|--------|-------|
+| API Key | `Filament_Admin` / Key ID: `T3YJM843N6` (Admin role, Sales & Trends access) |
+| Private Key | `~/.appstoreconnect/private_keys/AuthKey_T3YJM843N6.p8` |
+| Issuer ID | `d213c1d6-f758-4675-813f-a0abf4f9bb67` |
+| Vendor Number | `94046197` |
+| Python env | `~/.shared_agent_venv` (PyJWT required) |
+
+> **Note:** Proceeds are shown in local currency per country (e.g. RUB for Russia). The ASC web UI normalizes to USD.
+
+> **Note:** The original API key (`86SL4Q53KW`) is still valid for version management but lacks Sales & Trends permission. Use `T3YJM843N6` for sales data.
+
+---
+
+## 14. System Tooling Notes
 
 - **ImageMagick** (`magick`) and **sips** are available for image conversion
 - **`gh`** CLI is installed and authenticated
@@ -221,7 +263,7 @@ These changes are **prepared but not deployed** until App Store go-live:
 
 ---
 
-## 14. Jules / AI Refactoring Notes
+## 15. Jules / AI Refactoring Notes
 
 - **Jules** is Google's automated code refiner. It generates patches and GitHub PRs.
 - **Jules CLI** (`jules`) is installed at `/opt/homebrew/bin/jules` and available in the environment.
